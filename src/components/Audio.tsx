@@ -105,7 +105,7 @@ export default function Transcription() {
             <div className="mt-6 flex flex-col items-center">
               <img
                 src="/placeholder-audio.png"
-                alt="Placeholder"
+                alt=""
                 className="h-32 mb-4 opacity-70"
               />
               <p className="text-gray-500 text-sm text-center">
