@@ -128,16 +128,21 @@ export default function AllComp() {
           </div>
         </SheetContent>
       </Sheet>
-
-      {/* Component Container */}
-      <div className="bg-gradient-to-br from-teal-900 via-blue-950 to-black min-h-screen">
-        {currentComponent === 'home' && <Home />}
+      <div className="min-h-screen bg-grid-white/[0.1]  relative flex items-center justify-center">
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="absolute pointer-events-none inset-0 flex items-center bg-gradient-to-br from-teal-900 via-blue-950 to-black justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+     <div className='relative'>
+     {currentComponent === 'home' && <Home />}
         {currentComponent === 'image' && <ImageCaptioning />}
         {currentComponent === 'audio' && <Transcription />}
         {currentComponent === 'video' && <VideoToTextGenerator />}
         {currentComponent === 'generate' && <ImageGenerator />}
         {currentComponent === 'chatbot' && <Chatbot />}
-      </div>
+     </div> 
+    </div>
+    <footer className="py-8 bg-black text-center">
+        <p className="text-gray-500">© 2024 MediaGenix. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

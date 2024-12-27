@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-conic from-teal-900 via-gray-900 to-teal-900 animate-spin-slow opacity-30 -z-10" />
 
       {/* Geometric shapes */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-teal-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob -z-10"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-teal-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob -z-10 "></div>
       <div className="absolute top-0 right-0 w-64 h-64 bg-teal-900 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000 -z-10"></div>
       <div className="absolute bottom-0 left-1/2 w-64 h-64 bg-teal-800 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000 -z-10"></div>
 

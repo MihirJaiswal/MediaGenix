@@ -2,7 +2,7 @@ import { FaArrowRight, FaRegStar } from 'react-icons/fa';
 
 export default function CTASection() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="pb-12 px-6 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20"></div>
       
@@ -12,7 +12,7 @@ export default function CTASection() {
         </div>
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
           Elevate Your Content Creation
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-600">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 ">
             Start Your Journey Today
           </span>
         </h2>

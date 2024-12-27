@@ -15,7 +15,7 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-6 ">
+      <section id="features" className="py-10">
         <h2 className="text-3xl font-bold text-center text-teal-400">Features</h2>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center">
@@ -43,17 +43,10 @@ export default function HomePage() {
       <section>
         <BentoAbout/>
       </section>
-
-
       {/* Call to Action */}
       <section className="py-16 px-6">
         <CTASection/>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 bg-black text-center">
-        <p className="text-gray-500">© 2024 MediaGenix. All rights reserved.</p>
-      </footer>
+      </section>    
     </div>
   );
 }

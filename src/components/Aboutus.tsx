@@ -38,7 +38,7 @@ export default function BentoAbout() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className={`${feature.className} p-8 rounded-3xl bg-gray-950/30 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
+              className={`${feature.className} p-8 rounded-3xl bg-blue-900/30 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group`}
             >
               <div>
                 <feature.icon className="w-12 h-12 text-teal-400 mb-6 group-hover:text-teal-300 transition-colors duration-300" />
