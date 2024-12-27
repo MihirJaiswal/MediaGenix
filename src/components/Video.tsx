@@ -211,7 +211,11 @@ const VideoToTextGenerator = () => {
           <div className="h-full bg-gray-900 rounded-lg p-4 border border-teal-600 shadow-lg overflow-auto">
             {isLoading ? (
               <div className="flex flex-col items-center justify-center h-full">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mb-4" />
+                <img
+                src="/loading.gif"
+                alt="Processing"
+                className="w-40 h-auto mb-4"
+              />
                 <p className="text-teal-500">Processing your video...</p>
               </div>
             ) : transcription ? (
