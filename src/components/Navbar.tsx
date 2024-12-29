@@ -8,15 +8,9 @@ import {
   FaVideo,
   FaPaintBrush,
   FaRobot,
-  FaBars,
-  FaTimes
+  FaBars
 } from 'react-icons/fa';
-import Home from './Home';
-import Transcription from './Audio';
-import ImageCaptioning from './Image';
-import VideoToTextGenerator from './Video';
-import ImageGenerator from './ImageGenerator';
-import Chatbot from './ChatBot';
+import { useRouter, usePathname } from 'next/navigation';
 
 // Import the Sheet component from ShadCN
 import {
@@ -24,14 +18,13 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
 
-type ComponentType = 'home' | 'image' | 'audio' | 'video' | 'generate' | 'chatbot';
-
-export default function AllComp() {
-  const [currentComponent, setCurrentComponent] = useState<ComponentType>('home');
+export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -46,23 +39,22 @@ export default function AllComp() {
     };
   }, []);
 
-  const handleClick = (component: ComponentType) => {
-    setCurrentComponent(component);
+  const handleClick = (path: string) => {
+    router.push(path);
     setIsMenuOpen(false);
   };
 
   const navItems = [
-    { id: 'home', icon: FaHome, label: 'Home' },
-    { id: 'image', icon: FaImage, label: 'Image Captioning' },
-    { id: 'audio', icon: FaMicrophoneAlt, label: 'Audio Transcription' },
-    { id: 'video', icon: FaVideo, label: 'Video to Text' },
-    { id: 'generate', icon: FaPaintBrush, label: 'Image Generator' },
-    { id: 'chatbot', icon: FaRobot, label: 'Chatbot' },
+    { id: 'home', icon: FaHome, label: 'Home', path: '/' },
+    { id: 'image', icon: FaImage, label: 'Image Captioning', path: '/image-caption' },
+    { id: 'audio', icon: FaMicrophoneAlt, label: 'Audio Transcription', path: '/audio-transcription' },
+    { id: 'video', icon: FaVideo, label: 'Video to Text', path: '/video-to-text' },
+    { id: 'generate', icon: FaPaintBrush, label: 'Image Generator', path: '/image-generator' },
+    { id: 'chatbot', icon: FaRobot, label: 'Chatbot', path: '/chatbot' },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      {/* Navbar */}
+    <div>
       <nav className="bg-[#111827] shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -71,17 +63,16 @@ export default function AllComp() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                {navItems.map(({ id, icon: Icon, label }) => (
+                {navItems.map(({ id, icon: Icon, label, path }) => (
                   <button
                     key={id}
-                    onClick={() => handleClick(id as ComponentType)}
+                    onClick={() => handleClick(path)}
                     className={`
-                      ${currentComponent === id
+                      ${pathname === path
                         ? 'bg-gradient-to-r from-teal-500 to-blue-700 text-white'
                         : 'text-gray-300 hover:bg-gray-700 hover:text-white'}
                       px-3 py-2 rounded-md text-sm font-medium
                     `}
-                    aria-current={currentComponent === id ? 'page' : undefined}
                   >
                     <Icon className="inline-block mr-2" size={16} />
                     {label}
@@ -101,25 +92,22 @@ export default function AllComp() {
           </div>
         </div>
       </nav>
-
-      {/* Sheet Menu for Mobile */}
       <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
         <SheetContent side="right" className="bg-gray-950 text-white">
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
           </SheetHeader>
           <div className="mt-4 space-y-4">
-            {navItems.map(({ id, icon: Icon, label }) => (
+            {navItems.map(({ id, icon: Icon, label, path }) => (
               <button
                 key={id}
-                onClick={() => handleClick(id as ComponentType)}
+                onClick={() => handleClick(path)}
                 className={`
-                  ${currentComponent === id
+                  ${pathname === path
                     ? 'bg-gradient-to-r from-teal-500 to-blue-700 text-white'
                     : 'text-gray-300 hover:bg-gray-700 hover:text-white'}
                   block px-3 py-2 rounded-md text-base font-medium w-full text-left
                 `}
-                aria-current={currentComponent === id ? 'page' : undefined}
               >
                 <Icon className="inline-block mr-2" size={16} />
                 {label}
@@ -128,21 +116,6 @@ export default function AllComp() {
           </div>
         </SheetContent>
       </Sheet>
-      <div className="min-h-screen bg-grid-white/[0.1]  relative flex items-center justify-center">
-      {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center bg-bg1 justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-     <div className='relative'>
-     {currentComponent === 'home' && <Home />}
-        {currentComponent === 'image' && <ImageCaptioning />}
-        {currentComponent === 'audio' && <Transcription />}
-        {currentComponent === 'video' && <VideoToTextGenerator />}
-        {currentComponent === 'generate' && <ImageGenerator />}
-        {currentComponent === 'chatbot' && <Chatbot />}
-     </div> 
-    </div>
-    <footer className="py-8 bg-black text-center">
-        <p className="text-gray-500">© 2024 MediaGenix. All rights reserved.</p>
-      </footer>
     </div>
   );
 }

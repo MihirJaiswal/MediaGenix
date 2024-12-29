@@ -2,7 +2,7 @@ import { ArrowRight, Video, Image, Mic, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative text-white overflow-hidden  md:py-20 py-2 flex items-center justify-center">
+    <section className="relativ text-white overflow-hidden  md:py-20 py-2 flex items-center justify-center">
       {/* Background grid */}
       <div className="absolute inset-0 bg-grid bg-grid-teal/[0.05] -z-10" />
 

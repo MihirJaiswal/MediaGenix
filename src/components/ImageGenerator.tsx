@@ -65,7 +65,7 @@ const ImageGenerator: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center p-6 text-white ">
-      <div className="flex flex-col md:flex-row max-w-5xl w-full bg-gradient-to-t from-gray-950 via-teal-950 to-black p-6 rounded-lg shadow-lg border border-gray-400">
+      <div className="flex flex-col md:flex-row max-w-5xl w-full bg-gradient-to-t from-teal-950 via-blue-950 to-gray-900 p-6 rounded-lg shadow-lg border border-gray-400">
         {/* Left Section: Input for text description */}
         <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
           <h1 className="text-3xl font-bold mb-4 text-teal-400">AI Image Generator</h1>
@@ -87,7 +87,7 @@ const ImageGenerator: React.FC = () => {
             <button
               type="button"
               onClick={handleGenerateImage}
-              className="w-full bg-teal-500 text-black py-3 px-4 rounded-lg text-lg font-medium hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+              className="w-full bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-black py-3 px-4 rounded-lg text-lg font-medium hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
               disabled={loading}
             >
               {loading ? "Generating..." : "Generate Image"}
@@ -123,7 +123,7 @@ const ImageGenerator: React.FC = () => {
                   {/* Download Button */}
                   <button
                     onClick={handleDownload}
-                    className="mt-4 w-full bg-teal-500 text-black py-3 px-4 rounded-lg text-lg font-medium hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+                    className="mt-4 w-full bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-black py-3 px-4 rounded-lg text-lg font-medium hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
                   >
                     Download Image
                   </button>

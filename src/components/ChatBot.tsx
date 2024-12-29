@@ -56,7 +56,7 @@ const ChatComponent = () => {
 
   return (
     <div className=" text-white p-6 flex flex-col items-center">
-      <div className="w-full max-w-3xl bg-gradient-to-b from-teal-950 via-gray-950 to-black border border-gray-500 p-6 rounded-lg shadow-lg flex flex-col space-y-6">
+      <div className="w-full max-w-3xl bg-gradient-to-b from-teal-950 via-blue-950 to-gray-900 border border-gray-500 p-6 rounded-lg shadow-lg flex flex-col space-y-6">
         {/* Chat Header */}
         <div className="text-center text-lg font-semibold text-teal-400">
           Chat with AI
@@ -94,7 +94,7 @@ const ChatComponent = () => {
             type="text"
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            className="flex-grow p-3 rounded-lg bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="flex-grow p-3 rounded-lg bg-gray-950 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
             placeholder="Type your message here..."
           />
           <button
