@@ -2,7 +2,7 @@ import { ArrowRight, Video, Image, Mic, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative text-white overflow-hidden  py-20 flex items-center justify-center">
+    <section className="relative text-white overflow-hidden  md:py-20 py-2 flex items-center justify-center">
       {/* Background grid */}
       <div className="absolute inset-0 bg-grid bg-grid-teal/[0.05] -z-10" />
 
@@ -27,10 +27,10 @@ export default function Hero() {
               MediaGenix
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
-            Your all-in-one tool for generating captivating content from audio,
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
+            Your all-in-one tool for generating and captivating content from audio,
             video, and images. Create stunning visual stories and bring your
-            ideas to life with ease.
+            ideas to life.
           </p>
           <button className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition duration-300 transform hover:scale-105 hover:shadow-lg">
             Get Started

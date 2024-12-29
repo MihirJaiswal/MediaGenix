@@ -16,6 +16,9 @@ export default {
   ],
   theme: {
   	extend: {
+		backgroundImage: {
+			"bg1": "radial-gradient(circle, #000000, #15070e, #1f0e1b, #251329, #27193a, #222246, #182a50, #00335a, #003c5b, #004357, #004951, #134e4a);"
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

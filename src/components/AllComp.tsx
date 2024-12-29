@@ -63,11 +63,11 @@ export default function AllComp() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Navbar */}
-      <nav className="bg-black shadow-md">
+      <nav className="bg-[#111827] shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <span className="font-bold text-xl text-teal-500">MediaGenix</span>
+              <span className="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">MediaGenix</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -130,7 +130,7 @@ export default function AllComp() {
       </Sheet>
       <div className="min-h-screen bg-grid-white/[0.1]  relative flex items-center justify-center">
       {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute pointer-events-none inset-0 flex items-center bg-gradient-to-br from-teal-900 via-blue-950 to-black justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center bg-bg1 justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
      <div className='relative'>
      {currentComponent === 'home' && <Home />}
         {currentComponent === 'image' && <ImageCaptioning />}
