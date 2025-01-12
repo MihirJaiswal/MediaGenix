@@ -52,10 +52,6 @@ MediaGenix is a fun, experimental web application built using Next.js and some A
 - It includes a responsive navbar and a mobile-friendly menu powered by ShadCN/UI.
 - Routes and functionalities are dynamically handled using Next.js.
 
-## Screenshots
-
-(Include some screenshots of your application here.)
-
 ## Limitations
 
 This is a fun project meant for exploration and learning. Some functionalities might not be robust or production-ready.
